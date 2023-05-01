@@ -1,0 +1,20 @@
+.left {
+  display: block;
+  float: left;
+  width: 30%;
+}
+
+.right {
+  display: block;
+  float: right;
+  width: 70%;
+  margin-top: 10px;
+}
+h1 {
+  display: block;
+  margin: auto;
+  margin-left: 5px;
+}
+dd {
+  margin-left: 0;
+}
