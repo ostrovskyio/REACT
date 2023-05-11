@@ -1,9 +1,33 @@
 import './App.css';
 import MyImage from './CV_photo.jpg';
+import { useState } from 'react';
 
 function Image() {
   return <img src={MyImage} width={300}/>
 }
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+function countIncrement() {
+  setCount(count + 1);
+}
+
+function countDecrement() {
+  setCount(count - 1);
+}
+return (
+  <div>
+  <div>Work experience in years:</div>
+  <p></p>
+  <div>{count}</div>
+  <button onClick={countIncrement}>+</button>
+  <button onClick={countDecrement}>-</button>
+  <p></p>
+  </div>
+);
+}
+
 
 function ListL() {
   return (
@@ -42,9 +66,6 @@ function ListR() {
   )
 }
 
-
-
-
 function App() {
   return (
     <div>
@@ -55,7 +76,8 @@ function App() {
       <ListL />
       </div>
       <div className='right'>
-      <div>Study experience</div>
+      <Counter />
+        <div>Study experience</div>
       <ListR />
         </div>
     </div>
