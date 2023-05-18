@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 function JobItem({ title, description, name, link }) {
   return (
     <dl>
-      <dt>Period:&nbsp;</dt>
+      <dt class='exp'>Period:&nbsp;</dt>
       <dd>{title}</dd>
-      <dt>Position:&nbsp;</dt>
+      <dt class='exp'>Position:&nbsp;</dt>
       <dd>{name}</dd>
-      <dt>Description:&nbsp;</dt>
+      <dt class='exp'>Description:&nbsp;</dt>
       <dd>{description}</dd>
-      <dt>Link:&nbsp;</dt>
+      <dt class='exp'>Link:&nbsp;</dt>
       <dd><a href={link}>{link}</a></dd>
     </dl>
   );
@@ -61,25 +61,25 @@ function ExperienceList() {
       ))}
       <form onSubmit={handleSubmit}>
         <label>
-          Period:
+        <div class='exp'>Period:</div>
           <br />
           <input type="text" name="title" required />
         </label>
         <br />
         <label>
-          Position:
+        <div class='exp'>Position:</div>
           <br />
           <input type="text" name="name" required />
         </label>
         <br />
         <label>
-          Description:
+        <div class='exp'>Description:</div>
           <br />
           <textarea name="description" required />
         </label>
         <br />
         <label>
-          Link:
+          <div class='exp'>Link:</div>
           <br />
           <input type="text" name="link" required />
         </label>

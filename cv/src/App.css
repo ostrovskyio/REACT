@@ -1,20 +1,40 @@
+body {
+  background-color: #F4E9CD;
+}
 .left {
   display: block;
   float: left;
-  width: 30%;
+  width: 25%;
+  background-color: #86A3B4;
+}
+
+#image {
+  margin: 0 0 0 20px;
+}
+
+.leftText {
+  padding-left: 20px;
 }
 
 .right {
   display: block;
   float: right;
-  width: 70%;
+  width: 74%;
   margin-top: 10px;
 }
 h1 {
   display: block;
   margin: auto;
-  margin-left: 5px;
+  margin-left: 25px;
+  margin-top: 10px;
 }
 dd {
   margin-left: 0;
+}
+.title {
+  font-weight: bold;
+  font-size: larger;
+}
+.exp {
+  font-weight: bold;
 }

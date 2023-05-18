@@ -14,7 +14,7 @@ function Counter() {
   }
   return (
     <div>
-    <div>Work experience in years:</div>
+    <div class='title'>Work experience in years:</div>
     <p></p>
     <div>{count}</div>
     <button onClick={countIncrement}>+</button>

@@ -2,6 +2,7 @@ import './App.css';
 import MyImage from './CV_photo.jpg';
 import ExperienceList from './L38/experience';
 import Counter from './L38/counter';
+import GitHubRepos from './L39/git_repos';
 
 //Приношу вибачення за відсутність нормального дизайну і сподіваюсь на оцінку це не вплине)
 //У найближчих ДЗ обовязково зроблю дизайн наближений до попереднього резюме)))
@@ -29,16 +30,22 @@ function App() {
   return (
     <div>
       <div className='left'>
-      <h1>OLEH OSTROVSKYI</h1>
-      <Image src={MyImage} />
-      <div>Contacts</div>
-      <ListL />
-      </div>
-      <div className='right'>
-      <Counter />
-        <div>Study experience:</div>
-      <ExperienceList />
+        <h1>OLEH OSTROVSKYI</h1>
+        <div id='image'>
+        <Image src={MyImage} />
         </div>
+        <div class='leftText'>
+        <div class='title'>Contacts</div>
+        <ListL />
+      <div>
+      <GitHubRepos />
+      </div>
+      </div>
+    </div><div className='right'>
+        <Counter />
+        <div class='title'>Study experience:</div>
+        <ExperienceList />
+      </div>
     </div>
   );
 }
