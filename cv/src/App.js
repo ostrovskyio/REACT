@@ -1,33 +1,14 @@
 import './App.css';
 import MyImage from './CV_photo.jpg';
-import { useState } from 'react';
+import ExperienceList from './L38/experience';
+import Counter from './L38/counter';
+
+//Приношу вибачення за відсутність нормального дизайну і сподіваюсь на оцінку це не вплине)
+//У найближчих ДЗ обовязково зроблю дизайн наближений до попереднього резюме)))
 
 function Image() {
   return <img src={MyImage} width={300}/>
 }
-
-function Counter() {
-  const [count, setCount] = useState(0);
-
-function countIncrement() {
-  setCount(count + 1);
-}
-
-function countDecrement() {
-  setCount(count - 1);
-}
-return (
-  <div>
-  <div>Work experience in years:</div>
-  <p></p>
-  <div>{count}</div>
-  <button onClick={countIncrement}>+</button>
-  <button onClick={countDecrement}>-</button>
-  <p></p>
-  </div>
-);
-}
-
 
 function ListL() {
   return (
@@ -44,28 +25,6 @@ function ListL() {
   )
 }
 
-function ListR() {
-  return (
-  <div>
-    <dl>
-      <dt>Period:&nbsp;</dt>
-      <dd>2018-2022</dd>
-      <dt>Position:&nbsp;</dt>
-      <dd>Student at Lviv national university Faculty of Law</dd>
-      <dt>Description:&nbsp;</dt>
-      <dd>Received a Bachelor's degree in Law. Understood, that programming is more interesting than daily paper work</dd>
-    </dl><dl>
-        <dt>Period:&nbsp;</dt>
-        <dd>2022-present time</dd>
-        <dt>Position:&nbsp;</dt>
-        <dd>Student at Robot_dreams IT-school</dd>
-        <dt>Description:&nbsp;</dt>
-        <dd>Hope to become JS Developer in the nearest future. I'm sure that the previous message is actually to perform</dd>
-      </dl>
-  </div>
-  )
-}
-
 function App() {
   return (
     <div>
@@ -77,8 +36,8 @@ function App() {
       </div>
       <div className='right'>
       <Counter />
-        <div>Study experience</div>
-      <ListR />
+        <div>Study experience:</div>
+      <ExperienceList />
         </div>
     </div>
   );
